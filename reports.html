@@ -1,0 +1,1797 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <title>Behave Test Report</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <style type="text/css">
+      <!--
+body{font-size:0;color:#fff;margin:0;
+padding:0}.behave,td,th{font:400 11px "Lucida Grande",Helvetica,sans-serif;
+background:#fff;color:#000}.behave #behave-header,td #behave-header,
+th #behave-header{background:#65c400;color:#fff;height:8em}.behave
+#behave-header #expand-collapse p,td #behave-header #expand-collapse
+p,th #behave-header #expand-collapse p{float:right;margin:0 0 0 10px}
+.background h3,.behave .scenario h3,td .scenario h3,th .scenario h3{
+font-size:11px;padding:3px;margin:0;background:#65c400;color:#fff;
+font-weight:700}.background h3{font-size:1.2em;background:#666}.behave
+h1,td h1,th h1{margin:0 10px;padding:10px;font-family:'Lucida Grande',
+Helvetica,sans-serif;font-size:2em;position:absolute}.behave h4,td h4,
+th h4{margin-bottom:2px}.behave div.feature,td div.feature,th div.feature
+{padding:2px;margin:0 10px 5px}.behave div.examples,td div.examples,th
+div.examples{padding:0 0 0 1em}.behave .stats,td .stats,th .stats{margin:2em}
+.behave .summary ul.features li,td .summary ul.features li,th .summary
+ul.features li{display:inline}.behave .step_name,td .step_name,th .step_name
+{float:left}.behave .step_file,td .step_file,th .step_file{text-align:right;
+color:#999}.behave .step_file a,td .step_file a,th .step_file a{color:#999}.behave
+.scenario_file,td .scenario_file,th .scenario_file{float:right;color:#999}.behave
+.tag,td .tag,th .tag{font-weight:700;color:#246ac1}.behave .backtrace,td
+.backtrace,th .backtrace{margin-top:0;margin-bottom:0;margin-left:1em;color:#000}
+.behave a,td a,th a{text-decoration:underline;color:#be5c00;margin-right:0.5em}
+.behave a:hover,td a:hover,th a:hover{text-decoration:none}.behave a:visited,td
+a:visited,th a:visited{font-weight:400}.behave a div.examples,td a div.examples,
+th a div.examples{margin:5px 0 5px 15px;color:#000}.behave .outline table,
+td .outline table,th .outline table{margin:0 0 5px 10px}.behave table,
+td table,th table{border-collapse:collapse}.behave table td,td table td,
+th table td{padding:3px 3px 3px 5px}.behave table td.failed,td table td.failed,
+th table td.failed{border-left:5px solid #c20000;border-bottom:1px solid
+#c20000;background:#fffbd3;color:#c20000}.behave table td.passed,td table
+td.passed,th table td.passed{border-left:5px solid #65c400;border-bottom:1px
+solid #65c400;background:#dbffb4;color:#3d7700}.behave table td.skipped,td
+table td.skipped,th table td.skipped{border-left:5px solid #0ff;border-bottom:1px
+solid #0ff;background:#e0ffff;color:#011}.behave table td.pending,.behave table
+td.undefined,td table td.pending,td table td.undefined,th table td.pending,th table
+td.undefined{border-left:5px solid #faf834;border-bottom:1px solid #faf834;
+background:#fcfb98;color:#131313}.behave table td.message,td table td.message,th
+table td.message{border-left:5px solid #0ff;border-bottom:1px solid #0ff;
+background:#e0ffff;color:#011}.behave ol,td ol,th ol{list-style:none;
+margin:0;padding:0}.behave ol li.step,td ol li.step,th ol li.step{
+padding:3px 3px 3px 18px;margin:5px 0 5px 5px}.behave ol li,td ol li,th
+ol li{margin:0 0 0 1em;padding:0 0 0 .2em}.behave ol li span.param,td
+ol li span.param,th ol li span.param{font-weight:700}.behave ol li.failed,td
+ol li.failed,th ol li.failed{border-left:5px solid #c20000;border-bottom:1px
+solid #c20000;background:#fffbd3;color:#c20000}.behave ol li.passed,td ol
+li.passed,th ol li.passed{border-left:5px solid #65c400;border-bottom:1px
+solid #65c400;background:#dbffb4;color:#3d7700}.behave ol li.skipped,td ol
+li.skipped,th ol li.skipped{border-left:5px solid #0ff;border-bottom:1px
+solid #0ff;background:#e0ffff;color:#011}.behave ol li.pending,.behave ol
+li.undefined,td ol li.pending,td ol li.undefined,th ol li.pending,th ol
+li.undefined{border-left:5px solid #faf834;border-bottom:1px solid
+#faf834;background:#fcfb98;color:#131313}.behave ol li.message,td ol
+li.message,th ol li.message{border-left:5px solid #0ff;border-bottom:1px
+solid #0ff;background:#e0ffff;color:#011;margin-left:10px}.behave #summary,td
+#summary,th #summary{margin:0;padding:5px 10px;text-align:right;top:0;
+right:0;float:right}.behave #summary p,td #summary p,th #summary
+p{margin:0 0 0 2px}.behave #summary #totals,td #summary #totals,th
+#summary #totals{font-size:1.2em} h3.failed,#behave-header.failed{background:
+#c40d0d !important} h3.undefined,#behave-header.undefined{background:#faf834
+ !important; color:#000 !important} #behave-header.failed a{color:#fff} pre {
+ white-space: pre-wrap} .step_duration{padding-left:1em}
+-->
+    </style>
+    <script type="text/javascript">
+      <!--
+function Collapsible_toggle(id)
+{
+    var elem = document.getElementById(id);
+    elem.style.display = (elem.style.display == 'none' ? 'block' : 'none');
+    return false;
+}
+
+function Collapsible_expandAll(className)
+{
+    var elems = document.getElementsByClassName(className);
+    for (var i=0; i < elems.length; i++) {
+        elems[i].style.display = 'block';
+    }
+}
+
+function Collapsible_collapseAll(className)
+{
+    var elems = document.getElementsByClassName(className);
+    for (var i=0; i < elems.length; i++) {
+        elems[i].style.display = 'none';
+    }
+}
+
+function Collapsible_expandAllFailed()
+{
+    var elems = document.getElementsByClassName('failed');
+    for (var i=0; i < elems.length; i++) {
+        var elem = elems[i];
+        if (elem.nodeName == 'H3'){
+            elem.parentElement.getElementsByTagName('ol')[0].style.display = 'block';
+        }
+    }
+}
+-->
+    </script>
+  </head>
+  <body>
+    <div class="behave">
+      <div id="behave-header">
+        <div id="label">
+          <h1>Behave Test Report</h1>
+        </div>
+        <div id="summary">
+          <p id="totals">
+            <p id="feature_totals">Features: passed: 1</p>
+            <p id="scenario_totals">Scenarios: passed: 26</p>
+            <p id="step_totals">Steps: passed: 127</p>
+          </p>
+          <p id="duration">Finished in 25.0 seconds</p>
+          <div id="expand-collapse">
+            <a id="expander" href="#" onclick="Collapsible_expandAll('scenario_steps')">Expand All</a>
+            <span> | </span>
+            <a id="collapser" href="#" onclick="Collapsible_collapseAll('scenario_steps')">Collapse All</a>
+            <span> | </span>
+            <a id="failed_expander" href="#" onclick="Collapsible_expandAllFailed()">Expand All Failed</a>
+          </div>
+        </div>
+      </div>
+      <div class="feature">
+        <h2>
+          <span class="val">Feature: DPT Functional Testing</span>
+        </h2>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">features/DPTe2e.feature:5</span>
+        <span class="tag">@Fran</span>
+        <h3 onclick="Collapsible_toggle('scenario_0')">
+          <span class="val">Scenario: Franchisee login with valid credentials</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_0">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">store user login credentials are given</span>
+              <small class="step_duration">(0.008s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:12</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">try to login by using valid credentials</span>
+              <small class="step_duration">(0.303s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:19</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">user should login successfully</span>
+              <small class="step_duration">(0.005s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:24</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Verify response status should True</span>
+              <small class="step_duration">(0.001s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:31</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">features/DPTe2e.feature:12</span>
+        <span class="tag">@Fran</span>
+        <h3 onclick="Collapsible_toggle('scenario_1')">
+          <span class="val">Scenario: Add invoice attachment from franchisee</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_1">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">Invoice documents given in files</span>
+              <small class="step_duration">(0.250s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:36</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">Upload invoice attachments</span>
+              <small class="step_duration">(1.629s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:45</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">verify response message</span>
+              <small class="step_duration">(0.003s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:51</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Verify response status should True</span>
+              <small class="step_duration">(0.002s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:31</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">features/DPTe2e.feature:19</span>
+        <span class="tag">@PVC</span>
+        <h3 onclick="Collapsible_toggle('scenario_2')">
+          <span class="val">Scenario: Accounts Get PVC invoices</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_2">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">Take accounts access token</span>
+              <small class="step_duration">(0.251s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:58</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">Get Invoices uploaded by franchisee</span>
+              <small class="step_duration">(0.317s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:65</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">Filter invoice id for specific franchisee</span>
+              <small class="step_duration">(0.003s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:71</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Verify response status should True</span>
+              <small class="step_duration">(0.002s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:31</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">features/DPTe2e.feature:26</span>
+        <span class="tag">@PVC</span>
+        <h3 onclick="Collapsible_toggle('scenario_3')">
+          <span class="val">Scenario: Accounts clear PVC updates</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_3">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">Take accounts access token and payloads for pvc update</span>
+              <small class="step_duration">(0.258s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:80</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Take PVC invoice id</span>
+              <small class="step_duration">(0.260s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:86</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">Clear specific PVC invoice updates</span>
+              <small class="step_duration">(0.241s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:97</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">verify response message</span>
+              <small class="step_duration">(0.003s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:51</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Verify response status should True</span>
+              <small class="step_duration">(0.001s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:31</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">features/DPTe2e.feature:34</span>
+        <span class="tag">@PVC</span>
+        <h3 onclick="Collapsible_toggle('scenario_4')">
+          <span class="val">Scenario: Accounts update pvc clear image</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_4">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">Take accounts access token and payloads for pvc update</span>
+              <small class="step_duration">(0.249s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:80</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Take PVC invoice id</span>
+              <small class="step_duration">(0.259s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:86</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">Update Invoice image as clear</span>
+              <small class="step_duration">(0.248s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:104</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">verify response message</span>
+              <small class="step_duration">(0.003s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:51</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Verify response status should True</span>
+              <small class="step_duration">(0.002s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:31</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">features/DPTe2e.feature:42</span>
+        <span class="tag">@PVC</span>
+        <h3 onclick="Collapsible_toggle('scenario_5')">
+          <span class="val">Scenario: Accounts update pvc invoice in flex name</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_5">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">Take accounts access token and payloads for pvc update</span>
+              <small class="step_duration">(0.240s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:80</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Take PVC invoice id</span>
+              <small class="step_duration">(0.256s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:86</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">Update Invoice name in flex</span>
+              <small class="step_duration">(0.261s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:112</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">verify response message</span>
+              <small class="step_duration">(0.004s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:51</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Verify response status should True</span>
+              <small class="step_duration">(0.003s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:31</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">features/DPTe2e.feature:50</span>
+        <span class="tag">@PVC</span>
+        <h3 onclick="Collapsible_toggle('scenario_6')">
+          <span class="val">Scenario: Accounts update pvc invoice distributor</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_6">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">Take accounts access token and payloads for pvc update</span>
+              <small class="step_duration">(0.244s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:80</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Take PVC invoice id</span>
+              <small class="step_duration">(0.276s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:86</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">Update Invoice distributor</span>
+              <small class="step_duration">(0.244s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:120</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">verify response message</span>
+              <small class="step_duration">(0.004s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:51</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Verify response status should True</span>
+              <small class="step_duration">(0.002s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:31</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">features/DPTe2e.feature:58</span>
+        <span class="tag">@PVC</span>
+        <h3 onclick="Collapsible_toggle('scenario_7')">
+          <span class="val">Scenario: Accounts update pvc invoice number</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_7">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">Take accounts access token and payloads for pvc update</span>
+              <small class="step_duration">(0.265s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:80</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Take PVC invoice id</span>
+              <small class="step_duration">(0.249s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:86</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">Update Invoice Number</span>
+              <small class="step_duration">(0.241s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:128</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">verify response message</span>
+              <small class="step_duration">(0.003s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:51</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Verify response status should True</span>
+              <small class="step_duration">(0.002s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:31</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">features/DPTe2e.feature:66</span>
+        <span class="tag">@PVC</span>
+        <h3 onclick="Collapsible_toggle('scenario_8')">
+          <span class="val">Scenario: Accounts update pvc invoice amount</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_8">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">Take accounts access token and payloads for pvc update</span>
+              <small class="step_duration">(0.260s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:80</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Take PVC invoice id</span>
+              <small class="step_duration">(0.250s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:86</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">Update Invoice Amount</span>
+              <small class="step_duration">(0.250s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:136</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">verify response message</span>
+              <small class="step_duration">(0.003s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:51</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Verify response status should True</span>
+              <small class="step_duration">(0.003s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:31</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">features/DPTe2e.feature:74</span>
+        <span class="tag">@PVC</span>
+        <h3 onclick="Collapsible_toggle('scenario_9')">
+          <span class="val">Scenario: Accounts update pvc invoice date</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_9">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">Take accounts access token and payloads for pvc update</span>
+              <small class="step_duration">(0.253s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:80</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Take PVC invoice id</span>
+              <small class="step_duration">(0.250s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:86</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">Update Invoice Date</span>
+              <small class="step_duration">(0.251s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:144</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">verify response message</span>
+              <small class="step_duration">(0.003s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:51</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Verify response status should True</span>
+              <small class="step_duration">(0.002s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:31</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">features/DPTe2e.feature:82</span>
+        <span class="tag">@PVC</span>
+        <h3 onclick="Collapsible_toggle('scenario_10')">
+          <span class="val">Scenario: Accounts update process pvc invoice</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_10">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">Take accounts access token and payloads for pvc update</span>
+              <small class="step_duration">(0.262s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:80</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Take PVC invoice id</span>
+              <small class="step_duration">(0.267s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:86</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">Process pvc invoice</span>
+              <small class="step_duration">(0.277s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:152</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">verify response message</span>
+              <small class="step_duration">(0.005s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:51</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Verify response status should True</span>
+              <small class="step_duration">(0.002s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:31</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">features/DPTe2e.feature:90</span>
+        <span class="tag">@BillingAdmin</span>
+        <h3 onclick="Collapsible_toggle('scenario_11')">
+          <span class="val">Scenario: Billing get GRN/IS invoices</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_11">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">Take billing access token</span>
+              <small class="step_duration">(0.271s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:160</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">Get GRN/IS Invoices uploaded by Accounts</span>
+              <small class="step_duration">(0.324s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:168</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">Filter invoice id for specific franchisee</span>
+              <small class="step_duration">(0.004s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:71</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Verify response status should True</span>
+              <small class="step_duration">(0.002s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:31</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">features/DPTe2e.feature:97</span>
+        <span class="tag">@BillingAdmin</span>
+        <h3 onclick="Collapsible_toggle('scenario_12')">
+          <span class="val">Scenario: Billing get executive for grn</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_12">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">Take billing access token and payloads</span>
+              <small class="step_duration">(0.282s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:175</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">Get executives for GRN</span>
+              <small class="step_duration">(0.262s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:182</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">Filter executive id for grn assignment</span>
+              <small class="step_duration">(0.005s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:188</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Verify response status should True</span>
+              <small class="step_duration">(0.002s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:31</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">features/DPTe2e.feature:104</span>
+        <span class="tag">@BillingAdmin</span>
+        <h3 onclick="Collapsible_toggle('scenario_13')">
+          <span class="val">Scenario: Billing assign executive for grn</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_13">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">Take billing access token and payloads for grnis assign</span>
+              <small class="step_duration">(0.295s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:197</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Take invoice id for grn assign</span>
+              <small class="step_duration">(0.306s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:205</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Get executive id for assign</span>
+              <small class="step_duration">(0.278s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:215</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">Assign Executive for GRN Invoice</span>
+              <small class="step_duration">(0.248s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:226</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">verify response message</span>
+              <small class="step_duration">(0.003s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:51</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Verify response status should True</span>
+              <small class="step_duration">(0.002s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:31</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">features/DPTe2e.feature:113</span>
+        <span class="tag">@BillingEx</span>
+        <h3 onclick="Collapsible_toggle('scenario_14')">
+          <span class="val">Scenario: Billing Executive upload GRN document</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_14">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">Take billing executive access token and payloads for grn/is upload</span>
+              <small class="step_duration">(0.293s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:233</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Take invoice id for grn/is document upload</span>
+              <small class="step_duration">(0.621s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:243</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Get executive id for assign</span>
+              <small class="step_duration">(0.266s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:215</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">Upload GRN document</span>
+              <small class="step_duration">(1.649s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:256</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">verify response message</span>
+              <small class="step_duration">(0.003s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:51</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Verify response status should True</span>
+              <small class="step_duration">(0.002s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:31</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">features/DPTe2e.feature:122</span>
+        <span class="tag">@BillingEx</span>
+        <h3 onclick="Collapsible_toggle('scenario_15')">
+          <span class="val">Scenario: Billing assign executive for IS</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_15">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">Take billing access token and payloads for grnis assign</span>
+              <small class="step_duration">(0.267s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:197</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Take invoice id for grn assign</span>
+              <small class="step_duration">(0.293s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:205</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Get executive id for assign</span>
+              <small class="step_duration">(0.250s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:215</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">Assign Executive for IS Invoice</span>
+              <small class="step_duration">(0.482s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:262</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">verify response message</span>
+              <small class="step_duration">(0.003s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:51</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Verify response status should True</span>
+              <small class="step_duration">(0.002s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:31</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">features/DPTe2e.feature:131</span>
+        <span class="tag">@BillingEx</span>
+        <h3 onclick="Collapsible_toggle('scenario_16')">
+          <span class="val">Scenario: Billing Executive upload IS document</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_16">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">Take billing executive access token and payloads for grn/is upload</span>
+              <small class="step_duration">(0.270s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:233</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Take invoice id for grn/is document upload</span>
+              <small class="step_duration">(0.533s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:243</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Get executive id for assign</span>
+              <small class="step_duration">(0.249s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:215</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">Upload IS document</span>
+              <small class="step_duration">(2.108s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:270</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">verify response message</span>
+              <small class="step_duration">(0.004s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:51</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Verify response status should True</span>
+              <small class="step_duration">(0.002s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:31</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">features/DPTe2e.feature:140</span>
+        <span class="tag">@AfterIS</span>
+        <h3 onclick="Collapsible_toggle('scenario_17')">
+          <span class="val">Scenario: Accounts Get Invoice for final validation after GRN/IS</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_17">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">Take accounts access token and get final validation payloads</span>
+              <small class="step_duration">(0.294s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:277</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">Find Final validation invoice id</span>
+              <small class="step_duration">(0.279s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:285</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">verify response message</span>
+              <small class="step_duration">(0.003s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:51</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Verify response status should True</span>
+              <small class="step_duration">(0.002s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:31</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">features/DPTe2e.feature:147</span>
+        <span class="tag">@AfterIS</span>
+        <h3 onclick="Collapsible_toggle('scenario_18')">
+          <span class="val">Scenario: Accounts update final validation after GRN/IS</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_18">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">Get accounts access token and payloads for update final validation</span>
+              <small class="step_duration">(0.263s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:295</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Get invoice id for final validation after grn/is</span>
+              <small class="step_duration">(0.255s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:303</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">Clear Final validation</span>
+              <small class="step_duration">(0.249s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:343</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">verify response message</span>
+              <small class="step_duration">(0.004s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:51</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Verify response status should True</span>
+              <small class="step_duration">(0.002s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:31</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">features/DPTe2e.feature:155</span>
+        <span class="tag">@AfterIS</span>
+        <h3 onclick="Collapsible_toggle('scenario_19')">
+          <span class="val">Scenario: Accounts update final validation after GRN/IS</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_19">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">Get accounts access token and payloads for update final validation</span>
+              <small class="step_duration">(0.326s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:295</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Get invoice id for final validation after grn/is</span>
+              <small class="step_duration">(0.254s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:303</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">Update GRN amt is equal to Invoice amt</span>
+              <small class="step_duration">(0.240s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:311</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">verify response message</span>
+              <small class="step_duration">(0.004s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:51</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Verify response status should True</span>
+              <small class="step_duration">(0.002s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:31</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">features/DPTe2e.feature:163</span>
+        <span class="tag">@AfterIS</span>
+        <h3 onclick="Collapsible_toggle('scenario_20')">
+          <span class="val">Scenario: Accounts update final validation after GRN/IS</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_20">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">Get accounts access token and payloads for update final validation</span>
+              <small class="step_duration">(0.262s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:295</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Get invoice id for final validation after grn/is</span>
+              <small class="step_duration">(0.245s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:303</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">Update Is amt is equal to GRN amt</span>
+              <small class="step_duration">(0.235s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:319</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">verify response message</span>
+              <small class="step_duration">(0.003s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:51</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Verify response status should True</span>
+              <small class="step_duration">(0.002s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:31</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">features/DPTe2e.feature:171</span>
+        <span class="tag">@AfterIS</span>
+        <h3 onclick="Collapsible_toggle('scenario_21')">
+          <span class="val">Scenario: Accounts update final validation after GRN/IS</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_21">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">Get accounts access token and payloads for update final validation</span>
+              <small class="step_duration">(0.249s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:295</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Get invoice id for final validation after grn/is</span>
+              <small class="step_duration">(0.258s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:303</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">Update Invoice in Store name</span>
+              <small class="step_duration">(0.237s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:327</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">verify response message</span>
+              <small class="step_duration">(0.004s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:51</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Verify response status should True</span>
+              <small class="step_duration">(0.002s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:31</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">features/DPTe2e.feature:179</span>
+        <span class="tag">@AfterIS</span>
+        <h3 onclick="Collapsible_toggle('scenario_22')">
+          <span class="val">Scenario: Accounts update final validation after GRN/IS</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_22">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">Get accounts access token and payloads for update final validation</span>
+              <small class="step_duration">(0.309s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:295</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Get invoice id for final validation after grn/is</span>
+              <small class="step_duration">(0.249s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:303</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">Update Free articles in invoice</span>
+              <small class="step_duration">(0.242s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:335</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">verify response message</span>
+              <small class="step_duration">(0.004s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:51</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Verify response status should True</span>
+              <small class="step_duration">(0.002s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:31</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">features/DPTe2e.feature:187</span>
+        <span class="tag">@AfterIS</span>
+        <h3 onclick="Collapsible_toggle('scenario_23')">
+          <span class="val">Scenario: Accounts update final validation after GRN/IS</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_23">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">Get accounts access token and payloads for update final validation</span>
+              <small class="step_duration">(0.246s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:295</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Get invoice id for final validation after grn/is</span>
+              <small class="step_duration">(0.259s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:303</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">Process final validation invoice</span>
+              <small class="step_duration">(0.225s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:351</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">verify response message</span>
+              <small class="step_duration">(0.003s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:51</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Verify response status should True</span>
+              <small class="step_duration">(0.001s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:31</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">features/DPTe2e.feature:195</span>
+        <span class="tag">@Franchisee</span>
+        <h3 onclick="Collapsible_toggle('scenario_24')">
+          <span class="val">Scenario: Franchisee Get Awaiting Acknowledgement and Completed Invoices</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_24">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">Get franchisee access token and payloads for approve Ack Invoice</span>
+              <small class="step_duration">(0.269s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:360</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Get invoice id for approve ack from franchisee</span>
+              <small class="step_duration">(0.243s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:367</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">Accept Process Completed invoice</span>
+              <small class="step_duration">(0.239s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:378</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">verify response message</span>
+              <small class="step_duration">(0.003s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:51</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Verify response status should True</span>
+              <small class="step_duration">(0.001s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:31</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">features/DPTe2e.feature:203</span>
+        <span class="tag">@Franchisee</span>
+        <h3 onclick="Collapsible_toggle('scenario_25')">
+          <span class="val">Scenario: Franchisee Get Awaiting Acknowledgement and Completed Invoices</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_25">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">Get franchisee access token and payloads</span>
+              <small class="step_duration">(0.248s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:385</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">View process completed and ack invoices</span>
+              <small class="step_duration">(0.257s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:393</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">verify response message</span>
+              <small class="step_duration">(0.003s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:51</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Verify response status should True</span>
+              <small class="step_duration">(0.001s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/stepsImpls.py:31</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+    </div>
+  </body>
+</html>
